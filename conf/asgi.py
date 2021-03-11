@@ -1,5 +1,5 @@
 """
-ASGI config for stepik_tours project.
+ASGI config for conf project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
