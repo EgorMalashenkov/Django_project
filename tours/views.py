@@ -1,15 +1,16 @@
 from django.shortcuts import render
+from data import departures, tours
 
 
-def MainView(request):
-    return render(request, 'index.html')
+def main_view(request):
+    return render(request, 'tours/index.html', departures)
 
 
-def DepartureView(request):
-    return render(request, 'departure.html')
+def depature_view(request):
+    return render(request, 'tours/departure.html', {'departures': departures})
 
 
-def TourView(request):
-    return render(request, 'tours.html')
+def tour_view(request):
+    return render(request, 'tours/tours.html')
 
 # Create your views here.
