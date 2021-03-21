@@ -7,21 +7,25 @@
       <p class="mt-5 w-50 mx-auto">Лучшие направления,где никто не будет вам мешать сидеть на берегу и изучать программирование, дизайн, разработку игр и управление продуктами</p>
     </section>
     <!-- CARDS -->
-  {% for key, value in tours.items %}
+ <main class="container mt-3">
+
     <div class="row mt-5">
+    {% for tour_id, value in tours %}
       <div class="col-4">
         <div class="card mb-4">
           <div class="embed-responsive embed-responsive-16by9">
-             <img class="card-img-top embed-responsive-item" src=" {{ key.picture }} " alt="" />
+             <img class="card-img-top embed-responsive-item" src=" {{ value.picture }} " alt="" />
           </div>
           <div class="card-body">
-            <h2 class="h5 card-title">{{ value.country }}: {{  value.title }}   {{ value.stars }}★</h2>
+            <h2 class="h5 card-title">{{ value.country }}: {{  value.title }} {{ value.stars }}★</h2>
             <p class="card-text">{{ value.description }}</p>
-            <a href="#" class="btn btn-sm btn-primary">Подробнее</a>
+            <a href="http://127.0.0.1:8000/tours/{{ tour_id }}" class="btn btn-sm btn-primary">Подробнее</a>
           </div>
         </div>
       </div>
+        {% endfor %}
     </div>
-  {% endfor %}
+
   </main>
+</main>
 {% endblock %}

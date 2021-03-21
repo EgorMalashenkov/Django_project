@@ -18,7 +18,7 @@
         <ul class="navbar-nav">
           {% for departure_id, departure in departures.items %}
           <li class="nav-item active">
-            <a class="nav-link" href="http://127.0.0.1:8000/{{ departure_id }}">{{ departure }}</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/departure/{{ departure_id }}">{{ departure }}</a>
           </li>
           {% endfor %}
         </ul>
